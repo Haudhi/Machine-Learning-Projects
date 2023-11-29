@@ -1,0 +1,21 @@
+No,Source Table,Metode,Refreshment,refresh column
+1,ih_billed_revenue_mm,snapshot,monthly,event_date
+2,ih_billed_smy_mm,snapshot,monthly,event_date
+3,ih_churn_dd,increment,mtd,event_date
+4,ih_closing_smy_mm,snapshot,monthly,event_date
+5,ih_collection_dd,increment,mtd,event_date
+6,ih_collection_trend_mtd,increment,mtd,event_date
+7,ih_ct0_mm,snapshot,monthly,event_date
+8,ih_cust_hvc_mm,snapshot,monthly,event_date
+9,ih_digital_addon,increment,mtd,event_date
+10,ih_inet_traffic_dd,increment,mtd,event_date
+11,ih_kuadran_mm,snapshot,monthly,event_date
+12,ih_line_in_service_dd,snapshot,monthly,event_date
+13,ih_line_in_service_mm,snapshot,monthly,event_date
+14,ih_sales_dd,increment,mtd,event_date
+15,ih_upsell_crossell_dd,increment,mtd,event_date
+,,,,
+,,,,
+Notes,,,,
+1.  snapshot = no need to do rerun data ones the data coming to postgre,,,,
+"2. increment = need to do full refresh based on refresh column on the running month only (ex: ""2023-10-01"") , if next month partition created ex:""2023-11-01"" then the full refresh only for november data.",,,,
